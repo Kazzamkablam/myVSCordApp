@@ -7,24 +7,60 @@
     -->
 
         <link rel="stylesheet" type="text/css" href="css/style.css">
-        <title>Juha's Counter app</title>
+        <title>Passrama</title>
         <!--
             Name: Juha Penttinen
             Student Number: 1700028
-            App Description: A Simple Apache Cordova App: Click Counter with GitRepository
+            App Description: Password storage app demo
       
             -->
+
+
     </head>
     <body>
-        <div class="box">
-            <label for="qty"<abbr title="Quantity">Qty</abbr></label>
-            <input id="qty" value="0" />
-            <button id="down" onclick="modify_qty(-1)">-1</button>
-            <button id="up" onclick="modify_qty(1)">+1</button>
-            <button id="reset" onclick="modify_reset()">reset</button>
+
+        <h1>Passrama</h1>
+
+        <div class="btn-group" style="width:100%">
+            <button onclick="menuToggle('home')" style="width:33.3%">Home</button>
+            <button onclick="menuToggle('work')" style="width:33.3%">Work</button>
+            <button onclick="menuToggle('fun')" style="width:33.3%">Fun</button>
+            <!--  <button onclick="app.loadData()" style="width:33.3%">Load</button> -->
         </div>
 
+        <div id="home">
+            Home
+            <div id="homecontent">
+
+            </div>
+        </div>
+        <div id="work">
+            Work
+            <div id="workcontent">
+
+            </div>
+        </div>
+        <div id="fun">
+            Fun
+            <div id="funcontent">
+
+            </div>
+        </div>
+
+        <div id="new" style="width:100%; margin-top:50px; display:none;">
+            <table>
+                <tr>
+                    <th style="width:33.3%"><input type="text" id="nservice"></th>
+                    <th style="width:33.3%"><input type="text" id="nname"></th>
+                    <th style="width:33.3%"><input type="text" id="npass"></th>
+                    <th style="width:10%"><button onclick="addNew()" class="button">Add</button></th>
+                </tr>
+            </table>
+        </div>
+        <button onclick="toggleNew()" class="button">Modify</button>
+        <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="scripts/index.js"></script>
         <script type="text/javascript" src="scripts/script.js"></script>
+
     </body>
 </html>
