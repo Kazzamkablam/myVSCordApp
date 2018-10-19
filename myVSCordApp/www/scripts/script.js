@@ -11,20 +11,21 @@ var app = {
 
 
     saveData: function () { //save my data
+        var storage = window.localStorage;
 
         console.log("saving");
         var myJSON = JSON.stringify(passwords); 
-        localStorage.setItem('myData', myJSON);
+        storage.setItem('myData', myJSON);
 
       //  console.log(myJSON);
 
     },
     loadData: function () {  //load my data, before you ask, yes I know OS can wipe localstorage if it needs more space, needs better solution but I'm tired atm.
 
-    
+        var storage = window.localStorage;
 
-        var myJSON = localStorage.getItem('myData');
 
+        var myJSON = storage.getItem('myData');
         //console.log(myJSON);
 
           passwords = JSON.parse(myJSON);
