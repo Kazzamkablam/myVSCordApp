@@ -174,9 +174,15 @@ function generateTable(elem) { //generate table
             });
             var btntn = document.createTextNode("X");
             tndelete.appendChild(btntn);
+            tndelete.className = "indigo-400 border-white radius-left font36";
             tditem.appendChild(tnitem);
             tdname.appendChild(tnname);
             tdpass.appendChild(tnpass);
+   /*         tbl.className = "row horizontal-align-center grey";
+            tditem.className = "col-20";
+            tdname.className = "col-20";
+            tdpass.className = "col-20";
+            tddelete.className = "horizontal-align-right"; */
             tddelete.appendChild(tndelete);
 
             tr.appendChild(tditem);

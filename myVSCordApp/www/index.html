@@ -1,66 +1,74 @@
 ﻿<!DOCTYPE html>
 <html>
-    <head>
+<head>
+    <link rel="stylesheet" type="text/css" href="mobileui/fonts.css">
+    <link rel="stylesheet" type="text/css" href="mobileui/style.css">
     <!--
         Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
         For details, see http://go.microsoft.com/fwlink/?LinkID=617521
     -->
 
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <title>Passrama</title>
-        <!--
-            Name: Juha Penttinen
-            Student Number: 1700028
-            App Description: Password storage app demo
-      
-            -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Passrama</title>
+    <!--
+        Name: Juha Penttinen
+        Student Number: 1700028
+        App Description: Password storage app demo
+
+        -->
 
 
-    </head>
-    <body>
+</head>
+<body has-footer has-header>
+    <div style="font-family: 'Monoton', cursive;font-size:36px" class="title font36 blue align-center">
+        Passrama
+    </div>
 
-        <h1>Passrama</h1>
-
-        <div class="btn-group" style="width:100%">
-            <button onclick="menuToggle('home')" style="width:33.3%">Home</button>
-            <button onclick="menuToggle('work')" style="width:33.3%">Work</button>
-            <button onclick="menuToggle('fun')" style="width:33.3%">Fun</button>
+    <div class="header sub blue">
+        <div class="buttons-group full">
+            <button class="indigo-400 border-white radius-left font36" onclick="menuToggle('home')">Home</button>
+            <button class="indigo-400 border-white font36" onclick="menuToggle('work')">Work</button>
+            <button class="indigo-400 border-white radius-right font36" onclick="menuToggle('fun')">Fun</button>
             <!--  <button onclick="app.loadData()" style="width:33.3%">Load</button> -->
         </div>
+    </div>
 
-        <div id="home">
-            Home
-            <div id="homecontent">
+    <div id="home">
+        Home
+        <div id="homecontent">
 
-            </div>
         </div>
-        <div id="work">
-            Work
-            <div id="workcontent">
+    </div>
+    <div id="work">
+        Work
+        <div id="workcontent">
 
-            </div>
         </div>
-        <div id="fun">
-            Fun
-            <div id="funcontent">
+    </div>
+    <div id="fun">
+        Fun
+        <div id="funcontent">
 
-            </div>
         </div>
+    </div>
 
-        <div id="new" style="width:100%; margin-top:50px; display:none;">
-            <table>
-                <tr>
-                    <th style="width:33.3%"><input type="text" id="nservice"></th>
-                    <th style="width:33.3%"><input type="text" id="nname"></th>
-                    <th style="width:33.3%"><input type="text" id="npass"></th>
-                    <th style="width:10%"><button onclick="addNew()" class="button">Add</button></th>
-                </tr>
-            </table>
-        </div>
-        <button onclick="toggleNew()" class="button">Modify</button>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="scripts/index.js"></script>
-        <script type="text/javascript" src="scripts/script.js"></script>
+    <div id="new" style="width:100%; margin-top:50px; display:none;">
+        <table>
+            <tr>
+                <th style="width:33.3%"><input class="placeholder-white text-white" placeholder="name" type="text" id="nservice"></th>
+                <th style="width:33.3%"><input class="placeholder-white text-white" placeholder="username" type="text" id="nname"></th>
+                <th style="width:33.3%"><input class="placeholder-white text-white" placeholder="password" type="text" id="npass"></th>
+                <th style="width:10%"><button onclick="addNew()" class="indigo-400 border-white radius-left font36">Add</button></th>
+            </tr>
+        </table>
+    </div>
+    <div class="footer blue">
+            <button onclick="toggleNew()" class="indigo-400 border-white font36 full big">Modify</button>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="mobileui/mobileui.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+    <script type="text/javascript" src="scripts/script.js"></script>
 
-    </body>
+</body>
 </html>
